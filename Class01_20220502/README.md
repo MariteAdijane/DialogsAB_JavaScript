@@ -8,7 +8,7 @@
 ![This is an image](http://www.ecowin.org/aulas/resources/tables/asciitable.jpg)
 Atsauce no pirmavota: https://www.ecowin.org/ascii.htm
 
-## Elektroniskā klades veidošana - repozitorijs  
+## Elektroniskās klades veidošana - repozitorijs  
 > Repozitorijs ir "Grāmata"; projekta virsmape, zem kuras atrodas mapes ar failiem:  
 >   - Projekts: Class_01_20220502 --> README.md  
 >   - Projekts: Class_02_2022... --> README.md  
