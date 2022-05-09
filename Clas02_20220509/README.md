@@ -22,3 +22,5 @@ Piemērs:
 > Binārais kods - *1001101 1000001*  
 > Heksadecimālais kods - *4d 41*  
 > Oktadecimālais kods - *115 101*  
+
+>
