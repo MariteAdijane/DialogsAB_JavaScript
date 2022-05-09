@@ -24,7 +24,7 @@ Piemērs:
 > Oktadecimālais kods - *115 101*  
 
 
- ![Kodu veidi] (C:\Users\marus\Desktop\JavaScript pamati\Kodu veidi.jpg) 
+ <img> (C:\Users\marus\Desktop\JavaScript pamati\Kodu veidi.jpg)  </img>
 
 
 
