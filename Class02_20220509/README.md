@@ -42,3 +42,6 @@ Piemērs:
 
 Ctrl+L --> Notīrīt ekrānu  
 :roll_eyes:
+
+testest
+
