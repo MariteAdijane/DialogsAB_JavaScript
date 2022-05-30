@@ -1,45 +1,89 @@
 <!DOCTYPE html>
-<html>
-<head>
-   
-<style>
-table, th, td {
-    border: 0.8px solid;
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 40%;
-    height: 30px;
-    }
-    
-td, th {
-      border: 2px solid #960e0e;
-      text-align: left;
-      padding: 5px;
-    }
-th {
-     background-color: #d573f3;
-    color: white;
-    }
-</style>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mans CV</title>
 
-<h2>CV</h2>
-<img src="http://127.0.0.1:5500/images/search.png" height="70px" width="70px"> </th>
-<table>
-  <tr>
-    <th>Vārds</th>
-    <td>Peteris</td>
-  </tr>
-  <tr>
-    <th>Uzvārds</th>
-    <td>Griffins</td>
-  <tr>
-    <th>E-pasts:</th>
-    <td>10101.10101@gmail.lv</td>
-  </tr>
-</table>
-</body>
+    <style>
+      table,
+      th,
+      td {
+        margin: 0 auto;
+        max-width: 900px;
+        width: 100%;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        height: 20px;
+      }
+
+      td,
+      th {
+        text-align: left;
+        padding: 5px;
+      }
+      .spacer {
+        height: 20px;
+      }
+      thead tr th:first-child,
+      tbody tr td:first-child {
+        width: 250px;
+        min-width: 250px;
+        max-width: 250px;
+        word-break: break-all;
+        text-align: right;
+        padding-right: 15px;
+        font-weight: bold;
+      }
+      tbody tr.separator td:first-child {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>CV</h2>
+    <img
+      src="http://127.0.0.1:5500/images/search.png"
+      height="70px"
+      width="70px"
+    />
+    <table>
+      <tr class="separator">
+        <td>Personīgā informācija</td>
+        <td></td>
+      </tr>
+      <tr class="spacer"></tr>
+
+      <tr>
+        <td>Vārds</td>
+        <td>Peteris</td>
+      </tr>
+      <tr>
+        <td>Uzvārds</td>
+        <td>Griffins</td>
+      </tr>
+
+      <tr>
+        <td>E-pasts:</td>
+        <td>10101.10101@gmail.lv</td>
+      </tr>
+
+      <tr>
+        <td>Tālrunis</td>
+        <td>+371 20002000</td>
+      </tr>
+
+      <tr>
+        <td>Tautība</td>
+        <td>Latvietis</td>
+      </tr>
+
+      <tr>
+        <td>Dzimšanas datums</td>
+        <td>1955.gada 10.decembris</td>
+      </tr>
+    </table>
+  </body>
 </html>
-
-
