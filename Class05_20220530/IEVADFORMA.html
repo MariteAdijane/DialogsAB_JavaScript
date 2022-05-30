@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Anketa</h2>
+
+<form action="">
+  <label for="fname">Vārds:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br><br>
+  <label for="lname">Uzvārds:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br><br>
+  <label for="date">Datums:</label><br>
+  <input type="date" id="start" name="trip-start" value="dd-mm-yyyy">
+  <br>
+  <br>
+</form> 
+
+<form> Dzimums:<br>
+    <input type="radio" id="html" name="dzimums_siev" value="Sieviete">
+    <label for="html">Sieviete</label><br>
+    <input type="radio" id="css" name="dzimums_vir" value="Vīrietis">
+    <label for="css">Vīrietis</label><br>
+    <input type="radio" id="javascript" name="dzimums_nav_def" value="Nevēlos norādīt">
+    <label for="javascript">Nevēlos norādīt</label>
+</form><br>
+
+<form>E-pasts:<br>
+    <input type="email"><br><br>
+</form>
+<form>Parole:</form>
+    <input type="password" id="pwd" name="pwd">
+</form>
+
+<h3>Komentāra lauks</h3>
+<form action="/action_page.php">
+  <textarea name="message" rows="10" cols="30">...</textarea>
+  <br><br>
+  <input type="Submit" value="Iesniegt">
+</form>
+
+
+<p>If you click the "Iesniegt" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
