@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
+    <title>Anketa
+    </title>
 <body>
 <style>
 body {
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgb(238, 219, 227) 0%, rgb(102, 170, 248) 120%);
+    background-size: auto;
 }
 </style>
 <h2>Anketa</h2>
@@ -21,25 +24,28 @@ body {
 </form> 
 
 <form> Dzimums:<br>
-    <input type="radio" id="html" name="dzimums_siev" value="Sieviete">
+    <input type="radio" id="html" name="fav_language" value="Sieviete">
     <label for="html">Sieviete</label><br>
-    <input type="radio" id="css" name="dzimums_vir" value="Vīrietis">
+    <input type="radio" id="css" name="fav_language" value="Vīrietis">
     <label for="css">Vīrietis</label><br>
-    <input type="radio" id="javascript" name="dzimums_nav_def" value="Nevēlos norādīt">
+    <input type="radio" id="javascript" name="fav_language" value="Nevēlos norādīt">
     <label for="javascript">Nevēlos norādīt</label>
 </form><br>
 
-<form>E-pasts:<br>
-    <input type="email"><br><br>
-</form>
-<form>Parole:</form>
-         <input type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters">
-</form>Parolei ir jābūt vismaz no 8 zīmēm.<br>
+<form action="/action_page.php">E-pasts:<br>
+    <input type="email" id="email" name="email required/" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+  </form><br>
+
+<form action="/action_page.php">Parole: <br>
+<input type="password" id="pwd" name="pwd"
+    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+    title="Ir jāsatur vismaz viens cipars, lielais burts.">
+</form>Parolei ir jābūt vismaz no 8 simboliem.<br>
 </form><br>
 
 <form>Papildus informācija<br>
 <form action="/action_page.php">
-  <textarea name="message" rows="10" cols="30">...</textarea>
+  <textarea name="message" rows="10" cols="30"></textarea>
   <br><br>
   <input type="Submit" value="Iesniegt">
 </form>
