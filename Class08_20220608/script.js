@@ -5,21 +5,22 @@ document.getElementById("dec").innerHTML = x;
 
 
 // Mana ņemšanās: string to binary
-var y = (x << 0) >> 7;
+var bit_number = 7^1048;
+var y = (x << (bit_number-7)) >> bit_number;
 var z = String(y);
-y = (x << 1) >> 7;
+y = (x << (bit_number-6)) >> bit_number;
 z = z + String(y);
-y = (x << 2) >> 7;
+y = (x << (bit_number-5)) >> bit_number;
 z = z + String(y);
-y = (x << 3) >> 7;
+y = (x << (bit_number-4)) >> bit_number;
 z = z + String(y);
-y = (x << 4) >> 7;
+y = (x << (bit_number-3)) >> bit_number;
 z = z + String(y);
-y = (x << 5) >> 7;
+y = (x << (bit_number-2)) >> bit_number;
 z = z + String(y);
-y = (x << 6) >> 7;
+y = (x << (bit_number-1)) >> bit_number;
 z = z + String(y);
-y = (x << 7) >> 7;
+y = (x << (bit_number-0)) >> bit_number;
 z = z + String(y);
 
 // Atbilde būs:
