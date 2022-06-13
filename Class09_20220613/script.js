@@ -2,6 +2,8 @@ var x = 60;
 document.getElementById("dec").innerHTML = x;
 
 
+
+
 /*
 >> un & (interesējošo bitu novietot vienmēr 0. pozīcijā un ar (x>>?) & 1)
 */
@@ -71,28 +73,44 @@ bit_sequence = zero_th_bit + bit_sequence;
 console.log(bit_sequence);
 document.getElementById("bin").innerHTML = bit_sequence;
 
+/* Kapēc to nedarīt šādi? */
+var cipars = 60;
+var dec2bin = cipars.toString(2);
+binarais = "00000000".substr(dec2bin.length) + dec2bin;
+console.log(binarais);
 
 /*
 Uzdevums 2
 */
 
-function circle(radius)
+function circle(radiuss)
 {
-    this.radius = 60;
-    this.perimeter = function ()
-    {
-        return 2*Math.PI*this.radius;
-    };
+    this.radiuss = radiuss;
+    this.apkartmers = (2*Math.PI*this.radiuss).toFixed(2);
 }
-var c = new circle(3);
-var text = c.perimeter().toFixed(2);
+var funkcija = new circle(30);
 
-var text = "Ja pieņem, ka zemes rādiuss ir " + document.getElementById(radius);
-var text_all = text +" km, tad ekvatora garums ir:" + " km";
-
-
-console.log(text_all);
+var text = "Ja pieņem, ka zemes rādiuss ir " + funkcija.radiuss + " km, tad ekvatora garums ir " + funkcija.apkartmers + " km.";
+document.getElementById("radiusa-teikums").innerHTML = text;
+console.log(text);
 
 /*
-uzdevums 3
+Uzdevums 3
 */
+var vards = "Pēteris";
+var uzvards = "Biezais!";
+var sakuma_summa_EUR = 30542.35
+var uzruna = "Cien., " + vards + " " + uzvards;
+var saturs = "Veicot ikgadējo bankas datu uzrauzību, esam konstatējuši, ka Jūsu bankas kontā atrodas" +
+" " + sakuma_summa_EUR + " EUR uzkrājums." + " " +"Ņemot vērā šī brīža tirgus lielu noguldījuma procentu likmi, piedāvājam Jums sekojošu: ";
+
+var procents_1_gada = sakuma_summa_EUR * 0.01 + sakuma_summa_EUR;
+var procents_2_gada = sakuma_summa_EUR * 0.02 + sakuma_summa_EUR;
+var procents_3_gada = sakuma_summa_EUR * 0.03 + sakuma_summa_EUR;
+var procents_4_gada = sakuma_summa_EUR * 0.04 + sakuma_summa_EUR;
+var procents_5_gada = sakuma_summa_EUR * 0.05 + sakuma_summa_EUR;
+
+
+document.getElementById("gada_procentu_likme").innerHTML = (uzruna + " " + saturs);
+
+console.log(uzruna + " " + saturs);
