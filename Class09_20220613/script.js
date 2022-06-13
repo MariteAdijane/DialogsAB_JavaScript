@@ -88,7 +88,7 @@ var c = new circle(3);
 var text = c.perimeter().toFixed(2);
 
 var text = "Ja pieņem, ka zemes rādiuss ir " + document.getElementById(text);
-var text = text +", tad ekvatora garums ir:";
+var text = text +" km, tad ekvatora garums ir:" + " km";
 
 
 console.log(text);
