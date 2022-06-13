@@ -87,11 +87,11 @@ function circle(radius)
 var c = new circle(3);
 var text = c.perimeter().toFixed(2);
 
-var text = "Ja pieņem, ka zemes rādiuss ir " + document.getElementById(text);
-var text = text +" km, tad ekvatora garums ir:" + " km";
+var text = "Ja pieņem, ka zemes rādiuss ir " + document.getElementById(radius);
+var text_all = text +" km, tad ekvatora garums ir:" + " km";
 
 
-console.log(text);
+console.log(text_all);
 
 /*
 uzdevums 3
