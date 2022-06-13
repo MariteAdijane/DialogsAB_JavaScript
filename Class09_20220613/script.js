@@ -19,7 +19,7 @@ Loģiskais reiz.pa bitiem    0000 0000(bin) -> 0(dec)
 */
 console.log("0.bita attēlošana (pēc nobīdes pa 0 bitiem pa labi un 'reizināšanas' ar 1" + zero_th_bit);
 bit_sequence = zero_th_bit + bit_sequence;
-console.log(bit_sequence);
+console.log("0.bits:" + bit_sequence);
 
 var zero_th_bit = (x >> 1) & 1;
 
@@ -33,6 +33,66 @@ Loģiskais reiz.pa bitiem    0000 0000(bin) -> 0(dec)
 */
 console.log("1.bita attēlošana (pēc nobīdes pa 1 bitiem pa labi un 'reizināšanas' ar 1" + zero_th_bit);
 bit_sequence = zero_th_bit + bit_sequence;
-console.log("0. un 1.bits:" + bit_sequencebit_sequence);
+console.log("0. un 1.bits:" + bit_sequence);
 
-document.getElementById("bin") = bit_sequence;
+var zero_th_bit = (x >> 2) & 1;
+console.log(zero_th_bit);
+bit_sequence = zero_th_bit + bit_sequence;
+console.log(bit_sequence);
+document.getElementById("bin").innerHTML = bit_sequence;
+
+var zero_th_bit = (x >> 3) & 1;
+console.log(zero_th_bit);
+bit_sequence = zero_th_bit + bit_sequence;
+console.log(bit_sequence);
+document.getElementById("bin").innerHTML = bit_sequence;
+
+var zero_th_bit = (x >> 4) & 1;
+console.log(zero_th_bit);
+bit_sequence = zero_th_bit + bit_sequence;
+console.log(bit_sequence);
+document.getElementById("bin").innerHTML = bit_sequence;
+
+var zero_th_bit = (x >> 5) & 1;
+console.log(zero_th_bit);
+bit_sequence = zero_th_bit + bit_sequence;
+console.log(bit_sequence);
+document.getElementById("bin").innerHTML = bit_sequence;
+
+var zero_th_bit = (x >> 6) & 1;
+console.log(zero_th_bit);
+bit_sequence = zero_th_bit + bit_sequence;
+console.log(bit_sequence);
+document.getElementById("bin").innerHTML = bit_sequence;
+
+var zero_th_bit = (x >> 7) & 1;
+console.log(zero_th_bit);
+bit_sequence = zero_th_bit + bit_sequence;
+console.log(bit_sequence);
+document.getElementById("bin").innerHTML = bit_sequence;
+
+
+/*
+Uzdevums 2
+*/
+
+function circle(radius)
+{
+    this.radius = 60;
+    this.perimeter = function ()
+    {
+        return 2*Math.PI*this.radius;
+    };
+}
+var c = new circle(3);
+var text = c.perimeter().toFixed(2);
+
+var text = "Ja pieņem, ka zemes rādiuss ir " + document.getElementById(text);
+var text = text +", tad ekvatora garums ir:";
+
+
+console.log(text);
+
+/*
+uzdevums 3
+*/
