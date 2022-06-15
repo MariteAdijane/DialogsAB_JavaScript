@@ -14,7 +14,21 @@ document.getElementById("procenti_3").innerHTML = pelna_3;
 document.getElementById("procenti_4").innerHTML = pelna_4;
 document.getElementById("procenti_5").innerHTML = pelna_5;
 
-/*const cars = ["Saab", "Volvo", "BMW"];
+
+/*  UZDEVUMI:
+1. Attēlot summas ar 2 zīmēm pēc komata
+2. Palabot algoritmu (saīsināt) un papildus veikt aprēkinu, ja % izmaksa 1.gadā ir = (1.gada summa).., otrajā gadā ir = (1+2.gada sumamas).. utt
+3. Pārtaisīt par masīviem un saīsināt kodu
+4. Izskatīt JS Arrays līdz beigām un izprast
+*/
+
+
+
+/* Masīvs:
+const cars = ["Saab", "Volvo", "BMW"];
+cars;
+cars.sort();
+(3) ['BMW', 'Saab', 'Volvo'] -- IZMAINA oriģināju, pārliek alfabēta secībā!!!
 */
 
 /* Masīvs masīvā:
@@ -26,3 +40,12 @@ i=0
 cars[0][i] + "markas mašīnas ir:" +cars[1][i];
 cars[0][1] + " markas mašīnas ir: " + cars[1][1];
 */
+
+/* Sortēšana augošā secībā: 
+    [11,2,22,1].sort((a,b) => a-b);
+Sortēšana dilstošā secībā:
+    [11,2,22,1].sort((a,b) => b-a);
+*/
+
+
+
