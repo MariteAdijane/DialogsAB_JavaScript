@@ -1,19 +1,23 @@
 var vards_uzvards = "Jānis Bērziņš,";
 var nauda = 15000;
-var pelna_1 = (nauda * 0.0001) *1;
-var pelna_2 = (nauda * 0.0002) *1;
-var pelna_3 = (nauda * 0.0003) *3;
-var pelna_4 = (nauda * 0.0004) *4;
-var pelna_5 = (nauda * 0.0005) *5;
+var pelna_1 = (nauda * 0.01) *1;
+var pelna_2 = (nauda * 0.02) *1;
+var pelna_3 = (nauda * 0.03) *3;
+var pelna_4 = (nauda * 0.04) *4;
+var pelna_5 = (nauda * 0.05) *5;
 
 document.getElementById("client").innerHTML = vards_uzvards;
 document.getElementById("money").innerHTML = nauda;
-document.getElementById("procenti_1").innerHTML = pelna_1;
-document.getElementById("procenti_2").innerHTML = pelna_2;
-document.getElementById("procenti_3").innerHTML = pelna_3;
-document.getElementById("procenti_4").innerHTML = pelna_4;
-document.getElementById("procenti_5").innerHTML = pelna_5;
+document.getElementById("procenti_1").innerHTML = pelna_1.toFixed(2);
+document.getElementById("procenti_2").innerHTML = pelna_2.toFixed(2);
+document.getElementById("procenti_3").innerHTML = pelna_3.toFixed(2);
+document.getElementById("procenti_4").innerHTML = pelna_4.toFixed(2);
+document.getElementById("procenti_5").innerHTML = pelna_5.toFixed(2);
 
+
+/*jāpabeidz!!!!
+*/
+var pelnas_procents = (pelna_1 + 1) + ();
 
 /*  UZDEVUMI:
 1. Attēlot summas ar 2 zīmēm pēc komata
