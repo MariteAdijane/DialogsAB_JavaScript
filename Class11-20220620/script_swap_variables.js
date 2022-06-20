@@ -1,7 +1,6 @@
 var a=3,
     b=2,
     c=1,
-    temp=null;
 
 console.log("a= "+ a + " b= "+ b + " c= " + c);
 
