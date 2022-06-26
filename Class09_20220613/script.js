@@ -98,19 +98,29 @@ console.log(text);
 Uzdevums 3
 */
 var vards = "Pēteris";
-var uzvards = "Biezais!";
-var sakuma_summa_EUR = 30542.35
+var uzvards = "Apinis!";
+var sakuma_summa_EUR = 30500.52;
 var uzruna = "Cien., " + vards + " " + uzvards;
 var saturs = "Veicot ikgadējo bankas datu uzrauzību, esam konstatējuši, ka Jūsu bankas kontā atrodas" +
 " " + sakuma_summa_EUR + " EUR uzkrājums." + " " +"Ņemot vērā šī brīža tirgus lielu noguldījuma procentu likmi, piedāvājam Jums sekojošu: ";
 
 var procents_1_gada = sakuma_summa_EUR * 0.01 + sakuma_summa_EUR;
-var procents_2_gada = sakuma_summa_EUR * 0.02 + sakuma_summa_EUR;
-var procents_3_gada = sakuma_summa_EUR * 0.03 + sakuma_summa_EUR;
-var procents_4_gada = sakuma_summa_EUR * 0.04 + sakuma_summa_EUR;
-var procents_5_gada = sakuma_summa_EUR * 0.05 + sakuma_summa_EUR;
+var procents_2_gada = procents_1_gada * 0.02 + sakuma_summa_EUR;
+var procents_3_gada = procents_2_gada * 0.03 + sakuma_summa_EUR;
+var procents_4_gada = procents_3_gada * 0.04 + sakuma_summa_EUR;
+var procents_5_gada = procents_4_gada * 0.05 + sakuma_summa_EUR;
 
-
+var text1 = " Pirmajā gadā uzkrājums sastāda: " + procents_1_gada.toFixed(2) + " EUR. ";
+var text2 = " Otrajā gadā uzkrājums sastāda: " + procents_2_gada.toFixed(2) + " EUR. ";
+var text3 = " Trešajā gadā uzkrājums sastāda: " + procents_3_gada.toFixed(2) + " EUR. ";
+var text4 = " Ceturtajā gadā uzkrājums sastāda: " + procents_4_gada.toFixed(2) + " EUR. ";
+var text5 = " Piektajā gadā uzkrājums sastāda: " + procents_5_gada.toFixed(2) + " EUR. ";
 document.getElementById("gada_procentu_likme").innerHTML = (uzruna + " " + saturs);
+document.getElementById("uzkrajums_1").innerHTML = text1;
+document.getElementById("uzkrajums_2").innerHTML = text2;
+document.getElementById("uzkrajums_3").innerHTML = text3;
+document.getElementById("uzkrajums_4").innerHTML = text4;
+document.getElementById("uzkrajums_5").innerHTML = text5;
+document.getElementById("pec_pieciem_gadiem").innerHTML = "Pēc pieciem gadiem uzkrājuma daļa sastāda: " + (procents_4_gada * 0.05).toFixed(2) + " EUR lielu peļņu.";
 
 console.log(uzruna + " " + saturs);
