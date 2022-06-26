@@ -50,6 +50,3 @@ cars[0][1] + " markas mašīnas ir: " + cars[1][1];
 Sortēšana dilstošā secībā:
     [11,2,22,1].sort((a,b) => b-a);
 */
-
-
-
