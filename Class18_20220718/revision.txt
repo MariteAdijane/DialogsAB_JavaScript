@@ -4,7 +4,7 @@
 * atsevišķā ārējā failā (kkur tīklā)
 + scopes - fragmentiem, piemēram, funkcijai - {}
 + JS programmēšanas valodas teikumi parasti beidzās ar ";"
-** Browser + Inspect + Console + Source + Debug
+** Browser + Inspect + Console (Ctrl+L, notīrīšana) + Source + Debug
 
 1. Variables (mainīgie)
 *  var, let, const - nosaka pielietošanas reģionu
@@ -32,7 +32,8 @@ iestarpināt, izkopēt, apvienot,..
 + for( ; ; ){}
 + while (){}
 + do {} while ()
-++ for (array_surrent_element of array) - iterēšanai gara masīva ciklam, lai secīgi izrīkotos ar visiem masīva elementiem
+++ for (current_element of array) - iterēšanai gara masīva ciklam, lai secīgi izrīkotos ar visiem masīva elementiem
+++ for (current_property in array)
 
 5. Functions (funkcijas)
 + function function_name(function_arguments){function_body} - definition with statement
@@ -45,10 +46,13 @@ iestarpināt, izkopēt, apvienot,..
 + properties (īpašības) - object_name.object_property_name
                         - object_name["object_property_name"]
 + methods (funkcijas)
++ this (Window, object, HTML elementu notikuma gadījumā (element in case of event))
 ++ objekta definēšanas ar liteŗāļa palīdzību:
-    const object_name = {}
-
+    const object_name = {};
+    const object_name = new Object();
 ++ objekta definēšanas ar atslēgas vārda NEW pielietošanu:
-    o
-+++ pārlūku iebūvēti objekti (console)
+    object_name.object_property_name = object_property_value;
+++ object_name.object_method_name.call(other_object_name);
+++ other_object_name.other_object_method_name = object_name.object_method_name.bind(other_object_name);
++++ pārlūku iebūvēti objekti (Wondow,console)
 
