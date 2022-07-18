@@ -1,0 +1,54 @@
+0. JavaScript:
+* iekš hmtl (iekš head, body - iekš <script> tagiem)
+* atsevišķā lokālā failā
+* atsevišķā ārējā failā (kkur tīklā)
++ scopes - fragmentiem, piemēram, funkcijai - {}
++ JS programmēšanas valodas teikumi parasti beidzās ar ";"
+** Browser + Inspect + Console + Source + Debug
+
+1. Variables (mainīgie)
+*  var, let, const - nosaka pielietošanas reģionu
+* primitīvie datu tipi (Number, String, Boolean,..)
+* daudzas dažādas matemātiskās, loģiskās (||, &&, ..), bitu (|, &, >, ..) utt operācijas
+
+2. Array (masīvi)
+* viens_vaards[daudzi indeksēti elementi vai vērtības]
+* daudzas dažādas metodes attiecībā uz šo elementu kopu - pievienot, izdzēst, izbīdīt, iebīdīt,
+iestarpināt, izkopēt, apvienot,..
+** String - simbolu masīvs
+    "static text 1" + variable_value_or_operationa_result + "static text 2";
+    `static text 1 ${variable_value_or_operationa_result} statix text 2`
+
+3.1 If (koda izpildes zarošana)
++ else
++ izšķiršanas par vēlamo turpmāk izmantojamo vērtību vai darāmo darbību ar konstrukciju -
+(nosacījums) ? true_vērtība/darbība : false_vērtība/darbība;
+
+3.2 Switch (koda izpildes zarošana, ja ir daudz plašāka nākamā zara izvēle)
++ break;
++ default;
+
+4. Loops (cikli)
++ for( ; ; ){}
++ while (){}
++ do {} while ()
+++ for (array_surrent_element of array) - iterēšanai gara masīva ciklam, lai secīgi izrīkotos ar visiem masīva elementiem
+
+5. Functions (funkcijas)
++ function function_name(function_arguments){function_body} - definition with statement
++ const[/var/let] function_name = function(function_arguments){function_body} - definition with expression
+++                                function function_entire_for_recursion(function_arguments){function_body}
++++ functions defined by expression (pieteiktas ar izteiksmi) can't be hoisted - nevar tikt izmantotas pirms definēšanas(apraksta)
+++++ pārlūku iebūvētās funkcijas
+
+6. Objects (objekti)
++ properties (īpašības) - object_name.object_property_name
+                        - object_name["object_property_name"]
++ methods (funkcijas)
+++ objekta definēšanas ar liteŗāļa palīdzību:
+    const object_name = {}
+
+++ objekta definēšanas ar atslēgas vārda NEW pielietošanu:
+    o
++++ pārlūku iebūvēti objekti (console)
+
