@@ -32,8 +32,10 @@ iestarpināt, izkopēt, apvienot,..
 + for( ; ; ){}
 + while (){}
 + do {} while ()
-++ for (current_element of array) - iterēšanai gara masīva ciklam, lai secīgi izrīkotos ar visiem masīva elementiem
-++ for (current_property in array)
+++ for (current_element of array) - (of value) iterēšanai gara masīva ciklam, lai secīgi izrīkotos ar visiem masīva elementiem - satur vērtību
+++ for (current_element in array) - (in index) satur elementa indeksu (secība - 0; 1; 2;..)
+++ for (current_property of object) - isn't possible! - script is not iterable!
+++ for (current_property in object) - current_property contains property name
 
 5. Functions (funkcijas)
 + function function_name(function_arguments){function_body} - definition with statement
@@ -52,6 +54,16 @@ iestarpināt, izkopēt, apvienot,..
     const object_name = new Object();
 ++ objekta definēšanas ar atslēgas vārda NEW pielietošanu:
     object_name.object_property_name = object_property_value;
+++ Object.defineProperty(object_name, "object_property_name",{
+    value: ..,
+    writable: true/false,
+    enumerable: true/false,
+    configurable: true/false,
+    })
+++ Object.values(object_name) --> array with values of properties and descriptions of methods
+    (masīvs ar īpašību vērtībām un metožu aprakstiem; apakšobjektiem to nedarīs)
+++ JSON.stringify(object_name) --> symbol string with stringified property names and thei values (liek pēdiņās datus)
+    (NB! in output objects)
 ++ object_name.object_method_name.call(other_object_name);
 ++ other_object_name.other_object_method_name = object_name.object_method_name.bind(other_object_name);
 +++ pārlūku iebūvēti objekti (Wondow,console)

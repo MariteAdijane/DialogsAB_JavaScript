@@ -29,3 +29,6 @@ for (let current_property in obj1) {
 }
 
 document.getElementById("demo1").innerHTML = txt;
+
+// šajā gadījumā nevar izdzēst. paskaidrojums nav skaidrs no pasniedzējas puses.
+// delete obj2.property3;
