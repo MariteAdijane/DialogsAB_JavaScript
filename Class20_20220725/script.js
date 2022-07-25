@@ -20,8 +20,8 @@ const person = {
       this.language = lang;
     },
     set multiply(value) {
-      //this.counter *= value;
-      this.counter = this.counter * value;
+      // this.counter = this.counter * value;
+      this.counter *= value;
     },
   };
   
@@ -35,6 +35,7 @@ const person = {
   });
   Object.defineProperty(person, "increment", {
     get: function () {
+      // this.counter = this.counter + 1;
       this.counter++;
     },
   });
@@ -54,6 +55,23 @@ const person = {
     },
   });
   
+  Object.defineProperty(person, "test_get_with_parameter", {
+    // get: function (value) {
+    get: function () {
+      //console.log("output from test_get_with_parameter: "+value);
+      console.log("output from test_get_with_parameter: " + this.counter);
+    },
+  });
+  
+  Object.defineProperty(person, "test_set_with_parameters", {
+    // set: function (value1,value2) {
+      set: function ([value1, value2]) {
+      console.log("output from test_set_with_parameters: " + value1);
+      console.log("output from test_set_with_parameters: " + value2);
+      console.log("output from test_set_with_parameters: " + this.counter);
+    },
+  });
+  
   console.log(person);
   
   person.reset;
@@ -69,6 +87,13 @@ const person = {
   person.multiply = 4;
   console.log(person.counter);
   
+  //person.test_get_with_parameter = 100;
+  person.test_get_with_parameter;
+  console.log(person.counter);
+  
+  //person.test_set_with_parameters = 300, 400;
+  person.test_set_with_parameters = [300, 400];
+  console.log(person.counter);
   /*
   // Set data from the object using data property:
   person.firstName = "Carl";
