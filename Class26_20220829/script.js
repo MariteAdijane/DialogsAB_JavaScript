@@ -1,43 +1,19 @@
-// https://www.javascripttutorial.net/javascript-dom/javascript-getelementbyid/
-const p = document.getElementById('demo1');
-console.log(p);
-console.log("p.innerHTML: "+p.innerHTML);
-p.innerHTML = "1. Paragrāfa teksts (mainīts 1. reizi.)";
-console.log("p.innerText: "+p.innerText);
-p.innerText = "1. Paragrāfa teksts (mainīts 2. reizi.)";
-console.log("p.firstChild.nodeType: "+p.firstChild.nodeType);
-console.log("p.firstChild.textContent: "+p.firstChild.textContent);
-p.firstChild.textContent = "1. Paragrāfa teksts (mainīts 3. reizi.)";
-
-console.log(document.querySelectorAll('*[id]'));
-
-// https://www.javascripttutorial.net/javascript-dom/javascript-getelementsbyname/
+// Piemēra - https://www.javascripttutorial.net/javascript-dom/javascript-getelementsbyclassname/ - HTML dokumenta analīze:
 
 let btn = document.getElementById('btnRate');
-let output = document.getElementById('output');
-
-let radio_btns = document.getElementById('btn-group');
 
 btn.addEventListener('click', () => {
-    let rates = document.getElementsByName('rate');
-    rates.forEach((rate) => {
-        //console.log(rate);
-        console.log(rate.value + ' ' + rate.checked);
-        if (rate.checked) {
-            output.innerText = `You selected: ${rate.value}`;
-        }
+    let btn_group1 = document.getElementById('btn-group1');
+    let btns1 = btn_group1.getElementsByClassName('rate1');
+    
+    let data = [].map.call(btns1, btn => [btn.value, btn.checked]);
+    console.log(data);
+    
+    let btn_group2 = document.getElementById('btn-group2');
+    let btns2 = btn_group2.getElementsByClassName('rate2');
+    
+    data = [].map.call(btns2, btn => [btn.value, btn.checked]);
+    console.log(data);
     });
-    alert("Continue!");
-});
 
-radio_btns.addEventListener('click', () => {
-    let rates = document.getElementsByName('rate');
-    rates.forEach((rate) => {
-        //console.log(rate);
-        console.log(rate.value + ' ' + rate.checked);
-        if (rate.checked) {
-            output.innerText = `You selected: ${rate.value}`;
-        }
-    });
-    alert("Continue!");
-});
+    
