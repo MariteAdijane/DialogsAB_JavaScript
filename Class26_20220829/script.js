@@ -26,8 +26,8 @@ btn.addEventListener('click', () => {
         if (rate.checked) {
             output.innerText = `You selected: ${rate.value}`;
         }
-    alert("Continue!");
     });
+    alert("Continue!");
 });
 
 radio_btns.addEventListener('click', () => {
@@ -38,6 +38,6 @@ radio_btns.addEventListener('click', () => {
         if (rate.checked) {
             output.innerText = `You selected: ${rate.value}`;
         }
-    alert("Continue!");
     });
+    alert("Continue!");
 });
