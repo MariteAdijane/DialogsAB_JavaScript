@@ -1,3 +1,4 @@
+/*garais pieraksts - der visām pogām:*/
 let btn = document.querySelector('#btn');
 
 function display() {
@@ -6,7 +7,8 @@ function display() {
 
 btn.addEventListener('click',display);
 
-/* SHORT STORY:
+
+/* SHORT STORY - attiecās uz konkrētu pogu un nevar izsaukt display() uz visu:
 let btn = document.querySelector('#btn');
 
 btn.addEventListener('click', function(event) {
@@ -14,4 +16,10 @@ btn.addEventListener('click', function(event) {
 });
 
 p/s OUTPUT: 'click'
+*/
+
+/*Anonīma funkcija, īsākā versija
+btn.addEventListener('click',() => {
+    alert('It was clicked!');
+});
 */
