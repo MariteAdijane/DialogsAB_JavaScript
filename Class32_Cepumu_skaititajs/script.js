@@ -26,4 +26,4 @@ function izrekinatApmeklejumus() {
     }
 }
 
-izrekinatApmeklejumus()
+izrekinatApmeklejumus();
