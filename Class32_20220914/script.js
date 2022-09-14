@@ -1,35 +1,53 @@
-expires = new Date("2022-09-12T21:00:00.000");
+// https://www.javascripttutorial.net/web-apis/javascript-cookies/
 
-const str = document.cookie;
-if (str == "") {
-  console.log("No cookie");
-  i = 1;
-  document.cookie = `connection=${i}; path=/; expires=${expires.toGMTString()}`;
-  document.cookie = `cookie_name=cookie_value;`;
-} else {
-  console.log("cookies: ", str);
-  console.log(
-    "cookies (after split by connection=): ",
-    str.split("connection=")
-  );
-  //console.log("cookies (after split by connection=): ",str.split('connection=')[1]);
-  i =
-    (Number(str.split("connection=")[1])
-      ? Number(str.split("connection=")[1])
-      : 1) + 1;
-  document.cookie = `connection=${i}; path=/; expires=${expires.toGMTString()}`;
-  //console.log("cookies (after split by ;): ",str.split('connection=')[0].split(';'));
-  //console.log(str.split('connection=')[0].split(';')[0]);
-}
+expires = new Date();
+//console.log(expires);
+expires.setSeconds(expires.getSeconds() + 30);
+//console.log(expires);
 
-// document.cookie = `username=admin; path=/; expires=${expires.toGMTString()}`;
-// let intervalID = setInterval(check_cookie, 1000);
-function check_cookie() {
-  var current = new Date();
-  console.log(current);
-  const str = document.cookie;
-  console.log(str);
-  if (str == "") {
-    clearInterval(intervalID);
+var i = 1;
+document.cookie = `connection=${i}; path=/; expires=${expires.toGMTString()}`;
+console.log(document.cookie);
+
+// '_ga=GA1.1.1119525608.1663167970;
+//   _ga_Q3E3XZ7RL7=GS1.1.1663167970.1.1.1663167975.0.0.0;
+//   __gads=ID=a6487e8c79a9a1c1:T=1663167976:S=ALNI_Mb3EgK8SYnu51mYrWs2GwBhpSXesA'
+class Cookie {
+  static get(name) {
+    const cookieName = `${encodeURIComponent(name)}=`;
+    const cookie = document.cookie;
+    let value = null;
+
+    const startIndex = cookie.indexOf(cookieName);
+    if (startIndex > -1) {
+      let endIndex = cookie.indexOf(';', startIndex);
+      if (endIndex == -1) {
+        endIndex = cookie.length;
+      }
+      value = decodeURIComponent(
+        cookie.substring(startIndex + cookieName.length, endIndex)
+      );
+    }
+    console.log(value);
+    return value;
+  }
+
+  static set(name, value, expires, path, domain, secure) {
+    let cookieText = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
+    if (expires instanceof Date) {
+      cookieText += `; expires=${expires.toGMTString()}`; // cookieText = cookieText + `; ${expires}`;
+    }
+
+    if (path) cookieText += `; path=${path}`;
+    if (domain) cookieText += `; domain=${domain}`;
+    if (secure) cookieText += `; secure`;
+
+    document.cookie = cookieText;
+  }
+
+  static remove(name, path, domain, secure) {
+    Cookie.set(name, '', new Date(0), path, domain, secure);
   }
 }
+
+console.log("cookie with name connetion (value): " + Cookie.get('connection'));
