@@ -1,6 +1,6 @@
 // https://www.javascripttutorial.net/web-apis/javascript-cookies/
 
-expires = new Date();
+/*expires = new Date();
 //console.log(expires);
 expires.setSeconds(expires.getSeconds() + 30);
 //console.log(expires);
@@ -8,11 +8,12 @@ expires.setSeconds(expires.getSeconds() + 30);
 var i = 1;
 document.cookie = `connection=${i}; path=/; expires=${expires.toGMTString()}`;
 console.log(document.cookie);
-
+*/
 // '_ga=GA1.1.1119525608.1663167970;
 //   _ga_Q3E3XZ7RL7=GS1.1.1663167970.1.1.1663167975.0.0.0;
 //   __gads=ID=a6487e8c79a9a1c1:T=1663167976:S=ALNI_Mb3EgK8SYnu51mYrWs2GwBhpSXesA'
-class Cookie {
+
+/*class Cookie {
   static get(name) {
     const cookieName = `${encodeURIComponent(name)}=`;
     const cookie = document.cookie;
@@ -51,3 +52,31 @@ class Cookie {
 }
 
 console.log("cookie with name connetion (value): " + Cookie.get('connection'));
+*/
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+setCookie('TestCookies', 1, 7);
+getCookie('TestCookies');
+
