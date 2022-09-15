@@ -1,9 +1,12 @@
+// Definējam interesējošos lielumus:
+
 const container = document.querySelector('.container');
 const seats = document.querySelectorAll('.row .seat:not(.occupied)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
 
+// Funkcija saglabā datus un nereseto datus pa nullēm, bet pat pēc lapas pārlādes atstāj izvēlētās vērtības.
 populateUI();
 
 let ticketPrice = +movieSelect.value;
@@ -67,4 +70,5 @@ container.addEventListener('click', e => {
 });
 
 // Initial count and total set
+// Funkcija, kas atjauno datus - šajā gadījumā skaitu
 updateSelectedCount();
