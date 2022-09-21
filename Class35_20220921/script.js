@@ -1,0 +1,3 @@
+// Definējam interesējošos lielumus:
+
+
