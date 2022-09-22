@@ -27,3 +27,4 @@ function izrekinatApmeklejumus() {
 }
 
 izrekinatApmeklejumus();
+console.log(cValue);
