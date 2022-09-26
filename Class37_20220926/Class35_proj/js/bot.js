@@ -1,3 +1,4 @@
+
 //with enter send message
 const inputField = document.getElementById("input");
 inputField.addEventListener("keydown", (e) => {
@@ -7,6 +8,7 @@ inputField.addEventListener("keydown", (e) => {
     output(input);
   }
 });
+
 
 //remove everything other than words
 function output(input) {
@@ -56,7 +58,7 @@ const answers = [
 
 const alternatives = ["Go on...", "Try again"];
 
-function compare(utterancesArray, answersArray, string) {
+export function compare(utterancesArray, answersArray, string) {
   let reply;
   let replyFound = false;
   for (let x = 0; x < utterancesArray.length; x++) {
@@ -98,3 +100,5 @@ function addChatEntry(input, product) {
     botText.innerText = `${product}`;
   }, 2000);
 }
+
+module.exports.compare = compare;
