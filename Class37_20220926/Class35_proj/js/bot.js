@@ -1,14 +1,15 @@
-
 //with enter send message
-const inputField = document.getElementById("input");
-inputField.addEventListener("keydown", (e) => {
-  if (e.code === "Enter") {
-    let input = inputField.value;
-    inputField.value = "";
-    output(input);
-  }
-});
 
+if (typeof document !== "undefined") {
+  const inputField = document.getElementById("input");
+  inputField.addEventListener("keydown", (e) => {
+    if (e.code === "Enter") {
+      let input = inputField.value;
+      inputField.value = "";
+      output(input);
+    }
+  });
+}
 
 //remove everything other than words
 function output(input) {
@@ -58,7 +59,7 @@ const answers = [
 
 const alternatives = ["Go on...", "Try again"];
 
-export function compare(utterancesArray, answersArray, string) {
+function compare(utterancesArray, answersArray, string) {
   let reply;
   let replyFound = false;
   for (let x = 0; x < utterancesArray.length; x++) {
@@ -102,3 +103,5 @@ function addChatEntry(input, product) {
 }
 
 module.exports.compare = compare;
+module.exports.utterances = utterances;
+module.exports.answers = answers;
