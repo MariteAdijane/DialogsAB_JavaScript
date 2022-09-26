@@ -102,6 +102,7 @@ function addChatEntry(input, product) {
   }, 2000);
 }
 
-module.exports.compare = compare;
-module.exports.utterances = utterances;
-module.exports.answers = answers;
+//module.exports.compare = compare;
+//module.exports.utterances = utterances;
+//module.exports.answers = answers;
+module.exports = {compare, utterances, answers};
