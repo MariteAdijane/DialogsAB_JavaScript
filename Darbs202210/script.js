@@ -1,15 +1,17 @@
 function myFunction()
 {
-    var un = document.forms["/new_url"]["Uname"].value;
-    var pw = document.forms["/new_url"]["Pass"].value;
+    var un = document.forms["myForm"]["Uname"].value;
+    var pw = document.forms["myForm"]["Pass"].value;
     if(un== "admin" && pw=="12345");
     {
         window.location.href="./index2.html";
     }
-    else{
+    else(un!= "admin" && pw!="12345")
+    {
         alert("Invalid UserName and Password")
     }
 }
+
 
 /* TO DO LIST */
 $(".tdl-new").bind('keypress', function(e){
