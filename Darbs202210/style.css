@@ -1,3 +1,6 @@
+/*Piemērs no:
+https://www.codewithrandom.com/2022/09/09/glassmorphism-login-form-html-css-glassmorphism-form/*/
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +17,7 @@ section {
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to bottom, #8e8ef5, #bebfab);
+    background: linear-gradient(to bottom, #3f0675, #bebfab);
 }
 
 section .colour {
@@ -26,7 +29,7 @@ section .colour:nth-child(1) {
     top: -350px;
     width: 600px;
     height: 600px;
-    background: #bf4ad4;
+    background: #c1bdc2;
 }
 
 section .colour:nth-child(2) {
@@ -34,7 +37,7 @@ section .colour:nth-child(2) {
     width: 500px;
     height: 500px;
     bottom: -150px;
-    background: #f39e44;
+    background: #5b45b0;
 }
 
 section .colour:nth-child(3) {
@@ -42,7 +45,7 @@ section .colour:nth-child(3) {
     bottom: 50px;
     width: 300px;
     height: 300px;
-    background: #2b67f3;
+    background: #2d0cb3;
 }
 
 .box {
@@ -66,11 +69,11 @@ section .colour:nth-child(3) {
 
     0%,
     100% {
-        transform: translateY(-40px);
+        transform: translateY(-35px);
     }
 
-    50% {
-        transform: translateY(40px);
+    40% {
+        transform: translateY(35px);
     }
 }
 
