@@ -31,3 +31,6 @@ $(".tdl-new").bind('keypress', function(e){
         });
     return false;
   });
+
+  /*Kur šo likt un kā tas strādās???*/
+localStorage.setItem('Uname', 'Pass');
