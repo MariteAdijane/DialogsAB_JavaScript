@@ -253,3 +253,28 @@ section .colour:nth-child(3) {
     100%     { -webkit-transform: perspective(500px) rotateX(-90deg);}
 }
 
+
+
+/*
+Go Back pogas stils*/
+.parent {
+    display: inline;
+  }
+.links {
+    display: inline-block;
+    vertical-align: middle;
+  }
+.button {
+    width: 80px;
+    display: flex;
+    min-height: 25px;
+    border-radius: 8px;
+    justify-content: center;
+    background: rgba(242, 236, 236, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    vertical-align: middle;
+  }
+
+  

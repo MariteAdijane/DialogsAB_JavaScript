@@ -68,7 +68,7 @@ body {
 
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(68, 6, 115, 0.8);
+  background-color: rgba(109, 55, 149, 0.8);
   color: white;
 }
 
@@ -100,7 +100,10 @@ body {
 q {font-style: italic;}
 
 /* Add a blue color to the author */
-.author {color: rgb(170, 104, 153);}
+.author {
+  color: rgb(100, 29, 128);
+  font-style: italic;
+}
 
 
 /*Go Back pogas stils*/
@@ -108,12 +111,11 @@ q {font-style: italic;}
 .button {
   width: 80px;
   display: flex;
-  min-height: 30px;
-  border-radius: 10px;
+  min-height: 25px;
+  border-radius: 8px;
   align-items: left;
-  padding: 5px;
+  background-color: transparent;
   justify-content: center;
-  backdrop-filter: blur(5px);
   background: rgba(242, 236, 236, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.2);

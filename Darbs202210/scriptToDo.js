@@ -1,4 +1,5 @@
-/* TO DO LIST */
+/* TO DO LIST paņemts no:
+https://www.codewithrandom.com/2022/09/28/todo-list-using-javascript-2/*/
 $(".tdl-new").bind('keypress', function(e){
     var code = (e.keyCode ? e.keyCode : e.which);
     if(code == 13) {
