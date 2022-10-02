@@ -29,7 +29,7 @@ section .colour {
 }
 
 .container {
-    width: 500px;
+    width: 100%;
     display: flex;
     min-height: 600px;
     position: relative;
@@ -261,5 +261,25 @@ section .colour:nth-child(3) {
     grid-template-columns: 1fr 1fr; 
     grid-gap: 337px; 
     width: 100%; 
+  }
+  .box {
+    position: relative;
+  }
+
+  .button {
+    padding: 15px 20px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.8);
+    color: rgb(96, 59, 128);
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+  .button:hover {
+    background: rgba(255,255,255,1);
+  }
+  .button:active {
+    background: rgb(96, 59, 128);
+    color: #fff;
   }
 
