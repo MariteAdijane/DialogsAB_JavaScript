@@ -3,18 +3,18 @@ https://www.codewithrandom.com/2022/09/09/glassmorphism-login-form-html-css-glas
 
 body {
     height: 100%;
-    margin: 16%;
-    padding: 0;
-    box-sizing: border-box;
+    width: 100%;
+    margin: 48%;
     font-family: "Poppins", sans-serif;
     background-image: url(./images/font.png);
     background-position: center;
     position: relative;
   }
 
+
   /*Centrs*/
   .middle {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -33,8 +33,10 @@ body {
   /* Slideshow container */
 
 .slideshow-container {
-  position: relative;
-  background: transparent 50%;
+  position: fixed;
+  left: 0;
+  bottom: 0%;
+  width: 100%;
   
 }
 /* Slides */
@@ -48,13 +50,13 @@ body {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 35%;
   width: auto;
-  margin-top: -30px;
+  margin-top: -20px;
   padding: 16px;
   color: rgb(206, 203, 203);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
@@ -85,7 +87,7 @@ body {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: rgb(170, 164, 164);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -111,13 +113,16 @@ q {font-style: italic;}
 .button {
   width: 80px;
   display: flex;
-  min-height: 25px;
+  min-height: 23px;
   border-radius: 8px;
   align-items: left;
-  background-color: transparent;
+  opacity: 0.7;
   justify-content: center;
   background: rgba(242, 236, 236, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: fixed;
+  left: 4%;
+  bottom: 4%;
 }
