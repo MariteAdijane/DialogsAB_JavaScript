@@ -6,7 +6,7 @@ function pieteiksanas()
     var parole = document.forms["pieteiksanasForma"]["parole"].value;
 
     if (lietotajs && parole) { /* Pārbaudam vai vispār ir ievadīts lietotājvārds un parole */
-        if(lietotajs=== "admin" && parole==="admin123" || lietotajs==="marite" && parole==="marite123" || lietotajs==="skolotajs" && parole==="skolotajs123")  /* Pārbaudam vai administrators */
+        if(lietotajs=== "admin" && parole==="admin123" || lietotajs==="marite" && parole==="marite123")  /* Pārbaudam vai administrators */
             {
                 localStorage.setItem('lietotajvards', lietotajs);  /* Uzstādam lietotāju iekš LocalStorage */
                 window.location.href="./uzdevumu_saraksts.html";  /* Pārsūtam uz administratora sadaļu */
@@ -18,12 +18,6 @@ function pieteiksanas()
 }
 
 function iziet()
-{
-    localStorage.setItem('lietotajvards', null); 
-    window.location.replace("index.html");
-}
-
-function uzsakumu()
 {
     localStorage.setItem('lietotajvards', null); 
     window.location.replace("index.html");

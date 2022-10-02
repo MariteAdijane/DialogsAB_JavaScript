@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
 
-    <title>Drīzumā top</title>
+    <title>Darbu Saraksts - Administrators</title>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
@@ -28,50 +28,19 @@
       <div class="colour"></div>
       <div class="colour"></div>
       <div class="colour"></div>
-
+      
       <div class="box">
-        <div class="container">
-          <div class="drizuma-gaidams-bloks">
-            <h1>DRĪZUMĀ GAIDĀMS</h1>
-            <h3>Jaunais, 2023.gads pienāks pēc</h2>
-            <br>
-            <div id="pulkstenis"></div>
-          </div>
-
-
-        
-          <!-- Slideshow container -->
-
-          <div class="citatu-bloks">
-            
-            <!-- Full-width slides/quotes -->
-            <div class="citati">
-              <q>Have no fear of perfection - you'll never reach it.</q>
-              <p class="author">.. Salvador Dali ..</p>
+        <div class="container large">
+            <div class="darbu-saraksta-bloks">
+              <h2>Uzdevumu saraksts lietotājam <strong class="lietotajvards"></strong></h2>
+              <div class="darbu-saraksts">
+                <ul></ul>
+              </div>
+              <form class="darba-pievienosanas-forma">
+                <input type="text" placeholder="Ierakstīt šeit uzdevumu un nospiest 'Enter'..." />
+                <button type="submit">&plus;</button>
+              </form>
             </div>
-
-            <div class="citati">
-              <q>Anyone who has never made a mistake has never tried anything new.</q>
-              <p class="author">.. Albert Einstein ..</p>
-            </div>
-
-            <div class="citati">
-              <q>I have not failed. I've just found 10,000 ways that won't work.</q>
-              <p class="author">.. Thomas A. Edison ..</p>
-            </div>
-
-            <!-- Next/prev buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-
-          <!-- Dots/bullets/indicators -->
-          <div class="dot-container">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-          </div>
         </div>
         <br />
 
@@ -91,18 +60,18 @@
                 ><i class="fab fa-whatsapp"></i
               ></a>
             </div>
+            <!-- POGA izlogoties -->
             <div class="grid-child">
-              <button class="button" onclick="uzsakumu()">
-                Uz sākumu
+              <button class="button" onclick="iziet()">
+                Izlogoties
               </button>
             </div>
           </div>
-
+        </div>
       </div>
     </section>
 
     <script src="script.js"></script>
-    <script src="scriptComingSoon.js"></script>
+    <script src="scriptToDo.js"></script>
   </body>
 </html>
-
